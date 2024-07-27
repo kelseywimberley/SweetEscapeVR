@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class PlayerControls : MonoBehaviour
 {
@@ -12,6 +14,8 @@ public class PlayerControls : MonoBehaviour
     public float inRoomVolume = 0.35f;
     public float outRoomVolume = 0.75f;
 
+    public InputActionReference switchCharacterButton;
+
     void Start()
     {
         hershel = true;
@@ -20,5 +24,32 @@ public class PlayerControls : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnEnable()
+    {
+        switchCharacterButton.action.performed += SwitchCharacter;
+    }
+    private void OnDisable()
+    {
+        switchCharacterButton.action.performed -= SwitchCharacter;
+    }
+
+    private void SwitchCharacter(InputAction.CallbackContext obj)
+    {
+        if (hershel)
+        {
+            hershelPos.transform.position = transform.position;
+            hershelPos.transform.rotation = transform.rotation;
+            transform.position = gretaPos.transform.position;
+            hershel = false;
+        }
+        else
+        {
+            gretaPos.transform.position = transform.position;
+            gretaPos.transform.rotation = transform.rotation;
+            transform.position = hershelPos.transform.position;
+            hershel = true;
+        }
     }
 }

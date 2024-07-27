@@ -924,6 +924,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "X Button",
+                    "type": "Button",
+                    "id": "e567ba71-ef8b-4cd0-803f-2e2ac7357b3a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Y Button",
+                    "type": "Button",
+                    "id": "e7faec22-05c2-4fdc-94ad-558a04478dad",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1012,6 +1030,28 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Snap Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d72a66e7-d4e9-4be7-8571-3348989250ec",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "X Button",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1313cafc-e7d2-418b-9cf7-c8c26409f629",
+                    "path": "<XRController>{LeftHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Y Button",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -1417,6 +1457,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "A Button",
+                    "type": "Button",
+                    "id": "671e4141-d042-4c40-acd9-c1c33cd3c465",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "B Button",
+                    "type": "Button",
+                    "id": "79178b89-ea03-4903-9d9a-78571358ae50",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1560,6 +1618,28 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "UI Scroll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3436781d-c030-425a-b456-9a50fa9478c3",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "A Button",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "345a2ff7-3fde-4e07-9be0-425be98753ad",
+                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "B Button",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

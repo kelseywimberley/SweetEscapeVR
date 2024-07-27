@@ -53,6 +53,7 @@ public class CellDoorRise : MonoBehaviour
 
     public void BeginRising()
     {
+        Debug.Log("Activated");
         rise = true;
         audioSource.Play();
     }
