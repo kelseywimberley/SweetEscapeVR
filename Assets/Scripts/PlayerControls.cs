@@ -11,8 +11,8 @@ public class PlayerControls : MonoBehaviour
     public GameObject hershelPos;
     public GameObject gretaPos;
 
-    public float inRoomVolume = 0.35f;
-    public float outRoomVolume = 0.75f;
+    public float inRoomVolume = 0.75f;
+    public float outRoomVolume = 0.25f;
 
     public InputActionReference switchCharacterButton;
 

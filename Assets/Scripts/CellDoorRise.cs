@@ -8,6 +8,7 @@ public class CellDoorRise : MonoBehaviour
     private bool inHershelRoom;
     public float maxHeight;
 
+    private bool doneRising;
     private bool rise;
     private float speed;
     private AudioSource audioSource;
@@ -22,8 +23,9 @@ public class CellDoorRise : MonoBehaviour
             inHershelRoom = true;
         }
 
+        doneRising = false;
         rise = false;
-        speed = 5.0f;
+        speed = 0.5f;
         audioSource = gameObject.GetComponent<AudioSource>();
     }
 
@@ -45,6 +47,7 @@ public class CellDoorRise : MonoBehaviour
 
             if (transform.position.y > maxHeight)
             {
+                doneRising = true;
                 rise = false;
                 audioSource.Stop();
             }
@@ -53,8 +56,10 @@ public class CellDoorRise : MonoBehaviour
 
     public void BeginRising()
     {
-        Debug.Log("Activated");
-        rise = true;
-        audioSource.Play();
+        if (!doneRising)
+        {
+            rise = true;
+            audioSource.Play();
+        }
     }
 }
